@@ -14,4 +14,4 @@ comp:
 	jne end
 
 end:
-	
+	  
