@@ -1,0 +1,20 @@
+; rdi = fd, rsi = buf, rdx = length
+; CF (carry flag, control registers), sets to 1 if last system call fails (only for MacOS!)
+
+extern ___error
+global _ft_read
+
+section .text:
+
+_ft_read:
+	mov rax, 0x2000003	; read syscall id - 0x2000003
+	syscall				; read syscall, use call id from rax and write return value to rax
+	jc end				; jump short if CF = 1, then rax = errno
+	ret					; if ok, return rax (rax = num of read bytes)
+
+end:
+	push rax			; push to stack errno value
+	call ___error		; rax containts int * to errno variable
+	pop qword [rax]		; pop value to variable to which rax points (pop r12 / mov [rax], r12)
+	mov rax, -1
+	ret
