@@ -3,7 +3,7 @@ HEADER = libasm.h
 TEST = test
 
 CC = gcc
-CFLAGS = -g -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_strdup.s \
 		ft_write.s ft_read.s

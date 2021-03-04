@@ -18,8 +18,4 @@ end:
 	sub rax, rdi		; rax - rdi, save to rax
 	ret
 
-; xor al, al
-; repne scasb ; stops when ZF is set
-; sub rdi, rax
-; mov rax, rdi
-; ret
+; repne scasb

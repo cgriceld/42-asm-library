@@ -9,7 +9,7 @@ extern	_ft_strcpy
 global _ft_strdup
 
 _ft_strdup:
-	push rdi			; save ptr to src
+	push rdi			; save ptr to s
 	call _ft_strlen		; rax = length
 	mov rdi, rax		; copy to rdi, malloc uses rdi as size
 	inc rdi				; for \0
