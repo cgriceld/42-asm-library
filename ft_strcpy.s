@@ -1,9 +1,9 @@
 ; rdi = dst, rsi = src
 ; returns ptr to dst
 
-global _ft_strcpy
+section .text
 
-section .text:
+global _ft_strcpy
 
 _ft_strcpy:
 	push rdi			; save dst start
@@ -20,19 +20,12 @@ end:
 	pop rax
 	ret
 
-; call _ft_strlen
-; mov rcx, rax
-; rep movsb
-; 
-
-
-
 ; _ft_strcpy:
 ; 	xor rcx, rcx				; clear iterator
 ; 	jmp copy
 
 ; copy:
-; 	cmp [rsi + rcx], byte 0		; while (*src)
+; 	cmp byte [rsi + rcx], 0		; while (*src)
 ; 	je end						; jump if equal
 ; 	mov dl, [rsi + rcx]
 ; 	mov [rdi + rcx], dl			;
@@ -40,6 +33,6 @@ end:
 ; 	jmp copy					; next iter
 
 ; end:
-; 	mov [rdi + rcx], byte 0		; null-terminating
+; 	mov byte [rdi + rcx], 0		; null-terminating
 ; 	mov rax, rdi				; save dst ptr to rax
 ; 	ret

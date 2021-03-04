@@ -1,8 +1,8 @@
 ; rdi = s
 
-global _ft_strlen
+section .text
 
-section .text:
+global _ft_strlen
 
 _ft_strlen:
 	mov rax, rdi		; put rax at the string's start

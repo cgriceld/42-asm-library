@@ -1,10 +1,10 @@
 ; rdi = fd, rsi = s, rdx = length
 ; CF (carry flag, control registers), sets to 1 if last system call fails (only for MacOS!)
 
+section .text
+
 extern ___error
 global _ft_write
-
-section .text:
 
 _ft_write:
 	mov rax, 0x2000004	; write syscall - 0x2000004

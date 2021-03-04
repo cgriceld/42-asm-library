@@ -1,12 +1,12 @@
 ; rdi = s
 ; for malloc, rdi = size
 
+section .text
+
 extern	_malloc
 extern	_ft_strlen
 extern	_ft_strcpy
 global _ft_strdup
-
-section .text:
 
 _ft_strdup:
 	push rdi			; save ptr to src
