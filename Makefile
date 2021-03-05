@@ -23,8 +23,7 @@ test: all main.c
 	@$(CC) $(CFLAGS) -L. -lasm main.c -o $(TEST) && ./$(TEST)
 
 clean:
-	@/bin/rm -f $(OBJ)
-	@/bin/rm -f $(TEST)
+	@/bin/rm -f $(OBJ) $(TEST) read.txt write.txt
 
 fclean: clean
 	@/bin/rm -f $(NAME)
