@@ -4,7 +4,7 @@
 
 ***Makefile***
 * *`make`* -- compiles `libasm.a`.
-* * *`test`* -- compiles `libasm.a` and launches tests.
+* * `test`* -- compiles `libasm.a` and launches tests.
 * *`clean`* -- deletes object files and `.txt` files created for reading tests.
 * *`fclean`* -- deletes object files and `libasm.a`.
 * *`re`* -- runs `fclean` and recompiles.
